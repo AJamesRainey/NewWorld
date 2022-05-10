@@ -4,5 +4,5 @@ Team members:
 
 James Rainey 
 Andrew Morris
-Steven Briskey
-Aria Noria
+Steve Brisky
+Aria Menke
