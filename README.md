@@ -1,8 +1,11 @@
 # NewWorld
 Robot Game
+
 Team members:
 
+Leslie Cruz Ceron
 James Rainey 
 Andrew Morris
-Steve Brisky
-Aria Monkey
+Steve Briskey
+Aria Menke
+
