@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="128" tileheight="128" infinite="0" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" name="new_world_placeholders" tilewidth="128" tileheight="128" tilecount="12" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="128" height="128" source="placeholder_assets/placeholder_angled_platform.png"/>
+  </tile>
+  <tile id="1">
+   <image width="128" height="128" source="placeholder_assets/placeholder_basic_platform.png"/>
+  </tile>
+  <tile id="2">
+   <image width="128" height="128" source="placeholder_assets/placeholder_corner_platform.png"/>
+  </tile>
+  <tile id="3">
+   <image width="128" height="128" source="placeholder_assets/placeholder_dark_tile.png"/>
+  </tile>
+  <tile id="4">
+   <image width="128" height="128" source="placeholder_assets/placeholder_door.png"/>
+  </tile>
+  <tile id="5">
+   <image width="128" height="128" source="placeholder_assets/placeholder_edge_platform.png"/>
+  </tile>
+  <tile id="6">
+   <image width="128" height="128" source="placeholder_assets/placeholder_key.png"/>
+  </tile>
+  <tile id="7">
+   <image width="128" height="128" source="placeholder_assets/placeholder_light_tile.png"/>
+  </tile>
+  <tile id="8">
+   <image width="128" height="128" source="placeholder_assets/placeholder_passage.png"/>
+  </tile>
+  <tile id="9">
+   <image width="128" height="128" source="placeholder_assets/placeholder_thin_platform.png"/>
+  </tile>
+  <tile id="10">
+   <image width="128" height="128" source="placeholder_assets/placeholder_wall.png"/>
+  </tile>
+  <tile id="11">
+   <image width="128" height="128" source="placeholder_assets/placeholder_x_tile.png"/>
+  </tile>
+ </tileset>
+ <layer id="1" name="Platforms" width="25" height="20">
+  <data encoding="csv">
+11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,2147483654,2,2,2,2,6,0,0,0,0,0,0,0,0,0,2147483654,2,2,2,2,6,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,2147483654,2,2,2,6,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,2147483654,2,2,2,2,6,0,0,0,0,0,0,0,0,0,2147483654,2,2,2,2,6,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,2147483654,2,2,2,6,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,
+11,0,0,0,1,2,2,2,2,2147483649,0,0,0,0,0,1,2,2,2,2,2147483649,0,0,0,11,
+11,2,2,2,3,8,8,8,8,2147483651,2,2,2,2,2,3,8,8,8,8,2147483651,2,2,2,11
+</data>
+ </layer>
+</map>
