@@ -71,7 +71,7 @@ class MyGame(arcade.Window):
 
         # Name of map file to load
 
-        map_name = "test_map.tmx"
+        map_name = "proto_map_fixed.tmx"
 
 
 
@@ -113,7 +113,7 @@ class MyGame(arcade.Window):
         image_source = "Ozie/ozie_nomove.png"
         self.player_sprite = arcade.Sprite(image_source, CHARACTER_SCALING)
         self.player_sprite.center_x = 128
-        self.player_sprite.center_y = 128
+        self.player_sprite.center_y = 2944
         self.scene.add_sprite("Player", self.player_sprite)
 
 
