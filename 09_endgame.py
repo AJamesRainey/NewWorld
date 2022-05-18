@@ -73,8 +73,6 @@ class MyGame(arcade.Window):
 
         map_name = "proto_map_fixed.tmx"
 
-
-
         # Layer specific options are defined based on Layer names in a dictionary
 
         # Doing this will make the SpriteList for the platforms layer
