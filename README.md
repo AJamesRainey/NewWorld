@@ -1,6 +1,12 @@
 # NewWorld
-Robot Game
+Robot MATH Game
+Introduction:
+A game of basic math where a robot goes through different levels. The robot interacts with math puzzles that can be solved through pulling things like levers. 
 
+Development Environment:
+VS Code
+Language:
+Python w/ Arcade
 Team members:
 
 Leslie Cruz Ceron
