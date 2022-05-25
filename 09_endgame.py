@@ -202,18 +202,17 @@ class MyGame(arcade.Window):
         self.physics_engine.update()
 
         # See if we hit any coins
-        coin_hit_list = arcade.check_for_collision_with_list(
-            self.player_sprite, self.scene["Coins"]
+        lever_hit_list = arcade.check_for_collision_with_list(
+            self.player_sprite, self.scene["Levers"]
         )
 
         # Loop through each coin we hit (if any) and remove it
-        for coin in coin_hit_list:
-            # Remove the coin
-            coin.remove_from_sprite_lists()
-            # Play a sound
-            arcade.play_sound(self.collect_coin_sound)
-            # Add one to the score
-            self.score += 1
+        for lev in lever_hit_list:
+            
+            if # Change image
+            lev.append_texture(arcade.load_texture("placeholder_assets\levers\lever_blue_down.png"))
+            lev.set_texture(1)
+          
 
         # Position the camera
         self.center_camera_to_player()
