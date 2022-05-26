@@ -71,7 +71,7 @@ class MyGame(arcade.Window):
 
         # Name of map file to load
 
-        map_name = "proto_map_fixed.tmx"
+        map_name = "proto_map.tmx"
 
         # Layer specific options are defined based on Layer names in a dictionary
 
@@ -209,7 +209,7 @@ class MyGame(arcade.Window):
         # Loop through each coin we hit (if any) and remove it
         for lev in lever_hit_list:
             
-            if # Change image
+            # if # Change image
             lev.append_texture(arcade.load_texture("placeholder_assets\levers\lever_blue_down.png"))
             lev.set_texture(1)
           

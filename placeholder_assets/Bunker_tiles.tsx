@@ -28,9 +28,6 @@
  <tile id="20">
   <image width="128" height="128" source="placeholder_light_tile.png"/>
  </tile>
- <tile id="21">
-  <image width="128" height="128" source="placeholder_passage.png"/>
- </tile>
  <tile id="22">
   <image width="128" height="128" source="placeholder_thin_platform.png"/>
  </tile>
@@ -54,12 +51,20 @@
  </tile>
  <tile id="29">
   <image width="256" height="128" source="computers/screen_arrow_1.png"/>
+  <animation>
+   <frame tileid="29" duration="600"/>
+   <frame tileid="30" duration="600"/>
+  </animation>
  </tile>
  <tile id="30">
   <image width="256" height="128" source="computers/screen_arrow_2.png"/>
  </tile>
  <tile id="31">
   <image width="256" height="128" source="computers/screen_e-to-interact_1.png"/>
+  <animation>
+   <frame tileid="31" duration="600"/>
+   <frame tileid="32" duration="600"/>
+  </animation>
  </tile>
  <tile id="32">
   <image width="256" height="128" source="computers/screen_e-to-interact_2.png"/>
@@ -114,6 +119,22 @@
  </tile>
  <tile id="49">
   <image width="128" height="128" source="water_basic/water_basic_1.png"/>
+  <animation>
+   <frame tileid="49" duration="600"/>
+   <frame tileid="50" duration="600"/>
+   <frame tileid="51" duration="600"/>
+   <frame tileid="52" duration="600"/>
+   <frame tileid="53" duration="600"/>
+   <frame tileid="54" duration="600"/>
+   <frame tileid="55" duration="600"/>
+   <frame tileid="56" duration="600"/>
+   <frame tileid="57" duration="600"/>
+   <frame tileid="58" duration="600"/>
+   <frame tileid="59" duration="600"/>
+   <frame tileid="60" duration="600"/>
+   <frame tileid="61" duration="600"/>
+   <frame tileid="62" duration="600"/>
+  </animation>
  </tile>
  <tile id="50">
   <image width="128" height="128" source="water_basic/water_basic_2.png"/>
@@ -156,5 +177,8 @@
  </tile>
  <tile id="63">
   <image width="128" height="128" source="water_basic/water_basic_solid.png"/>
+ </tile>
+ <tile id="64">
+  <image width="256" height="256" source="placeholder_passage.png"/>
  </tile>
 </tileset>
