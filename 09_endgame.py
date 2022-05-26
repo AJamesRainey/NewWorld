@@ -14,7 +14,7 @@ TILE_SCALING = 0.5
 COIN_SCALING = 0.5
 SPRITE_PIXEL_SIZE = 128
 GRID_PIXEL_SIZE = SPRITE_PIXEL_SIZE * TILE_SCALING
-
+MAP_NAME = "proto_map.tmx"
 # Movement speed of player, in pixels per frame
 PLAYER_MOVEMENT_SPEED = 10
 GRAVITY = 1
@@ -71,7 +71,7 @@ class MyGame(arcade.Window):
 
         # Name of map file to load
 
-        map_name = "proto_map.tmx"
+        MAP_NAME = "proto_map.tmx"
 
         # Layer specific options are defined based on Layer names in a dictionary
 
@@ -93,7 +93,7 @@ class MyGame(arcade.Window):
 
         # Read in the tiled map
 
-        self.tile_map = arcade.load_tilemap(map_name, TILE_SCALING, layer_options)
+        self.tile_map = arcade.load_tilemap(MAP_NAME, TILE_SCALING, layer_options)
 
 
 
