@@ -65,7 +65,7 @@
   </object>
   <object id="5" gid="37" x="1532" y="1158.67" width="128" height="128">
    <properties>
-    <property name="color" value="red"/>
+    <property name="color" value="blue"/>
     <property name="flip" type="bool" value="false"/>
     <property name="order" type="int" value="1"/>
    </properties>
