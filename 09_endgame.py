@@ -212,6 +212,7 @@ class MyGame(arcade.Window):
         for l in object_hit:
             if l.properties['order'] != 0:
                     if self.scene["Levers_obj"][int(l.properties['order']-1)].properties["flip"] == True:
+                        l.properties["flip"] = True
                         l.append_texture(arcade.load_texture("placeholder_assets\levers\lever_"+l.properties["color"]+"_down.png"))
                         l.set_texture(1)
             else:
