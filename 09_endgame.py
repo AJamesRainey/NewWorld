@@ -201,7 +201,7 @@ class MyGame(arcade.Window):
         # Move the player with the physics engine
         self.physics_engine.update()
 
-        # See if we hit any coins
+        # See if we hit any levers
         lever_hit_list = arcade.check_for_collision_with_list(
             self.player_sprite, self.scene["Levers"]
         )
@@ -213,6 +213,12 @@ class MyGame(arcade.Window):
             lev.append_texture(arcade.load_texture("placeholder_assets\levers\lever_blue_down.png"))
             lev.set_texture(1)
           
+        # Check if player touches objects on danger layer
+        danger_hit_list = arcade.check_for_collision_with_list(
+            self.player_sprite, self.scene["Danger"]
+        )
+        for danger in danger_hit_list:
+            self.setup()
 
         # Position the camera
         self.center_camera_to_player()
