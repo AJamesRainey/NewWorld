@@ -1,6 +1,7 @@
 """
 Platformer Game
 """
+from xmlrpc.client import boolean
 import arcade
 
 # Constants
@@ -205,7 +206,19 @@ class MyGame(arcade.Window):
         lever_hit_list = arcade.check_for_collision_with_list(
             self.player_sprite, self.scene["Levers"]
         )
-
+        object_hit = arcade.check_for_collision_with_list(
+            self.player_sprite,self.scene["Levers_obj"]
+        )
+        for l in object_hit:
+            if l.properties['order'] != 0:
+                    if self.scene["Levers_obj"][int(l.properties['order']-1)].properties["flip"] == True:
+                        l.append_texture(arcade.load_texture("placeholder_assets\levers\lever_"+l.properties["color"]+"_down.png"))
+                        l.set_texture(1)
+            else:
+                l.properties["flip"] = True
+                l.append_texture(arcade.load_texture("placeholder_assets\levers\lever_"+l.properties["color"]+"_down.png"))
+                l.set_texture(1)
+        
         # Loop through each coin we hit (if any) and remove it
         for lev in lever_hit_list:
             
