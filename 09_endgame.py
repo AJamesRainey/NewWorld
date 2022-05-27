@@ -3,6 +3,7 @@ Platformer Game
 """
 from xmlrpc.client import boolean
 import arcade
+import scripting.handle_collisions_action as collisions
 
 # Constants
 SCREEN_WIDTH = 1000
@@ -15,7 +16,7 @@ TILE_SCALING = 0.5
 COIN_SCALING = 0.5
 SPRITE_PIXEL_SIZE = 128
 GRID_PIXEL_SIZE = SPRITE_PIXEL_SIZE * TILE_SCALING
-MAP_NAME = "proto_map.tmx"
+MAP_NAME = "door_test_map.tmx"
 # Movement speed of player, in pixels per frame
 PLAYER_MOVEMENT_SPEED = 10
 GRAVITY = 1
@@ -72,7 +73,7 @@ class MyGame(arcade.Window):
 
         # Name of map file to load
 
-        MAP_NAME = "proto_map.tmx"
+        MAP_NAME = "proto_map2.tmx"
 
         # Layer specific options are defined based on Layer names in a dictionary
 
@@ -87,6 +88,9 @@ class MyGame(arcade.Window):
                 "use_spatial_hash": True,
 
             },
+            'Blocking': {
+                'use_spatial_hash': True,
+            }
 
         }
 
@@ -130,7 +134,7 @@ class MyGame(arcade.Window):
 
         self.physics_engine = arcade.PhysicsEnginePlatformer(
 
-            self.player_sprite, gravity_constant=GRAVITY, walls=self.scene["Platforms"]
+            self.player_sprite, gravity_constant=GRAVITY, walls=(self.scene["Platforms"],self.scene['Blocking'])
 
         )
 
@@ -202,31 +206,13 @@ class MyGame(arcade.Window):
         # Move the player with the physics engine
         self.physics_engine.update()
 
-        # See if we hit any coins
-        lever_hit_list = arcade.check_for_collision_with_list(
-            self.player_sprite, self.scene["Levers"]
-        )
-        object_hit = arcade.check_for_collision_with_list(
-            self.player_sprite,self.scene["Levers_obj"]
-        )
-        for l in object_hit:
-            if l.properties['order'] != 0:
-                    if self.scene["Levers_obj"][int(l.properties['order']-1)].properties["flip"] == True:
-                        l.properties["flip"] = True
-                        l.append_texture(arcade.load_texture("placeholder_assets\levers\lever_"+l.properties["color"]+"_down.png"))
-                        l.set_texture(1)
-            else:
-                l.properties["flip"] = True
-                l.append_texture(arcade.load_texture("placeholder_assets\levers\lever_"+l.properties["color"]+"_down.png"))
-                l.set_texture(1)
-        
-        # Loop through each coin we hit (if any) and remove it
-        for lev in lever_hit_list:
-            
-            # if # Change image
-            lev.append_texture(arcade.load_texture("placeholder_assets\levers\lever_blue_down.png"))
-            lev.set_texture(1)
-          
+        # See if we hit any levers
+        collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'])
+
+        # Check if all levers are flipped
+        if self.scene['Levers'][2].properties['flip'] == True:
+            for block in self.scene['Blocking']:
+                block.remove_from_sprite_lists()
 
         # Position the camera
         self.center_camera_to_player()
