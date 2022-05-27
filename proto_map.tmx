@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="128" tileheight="128" infinite="0" nextlayerid="11" nextobjectid="1">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="128" tileheight="128" infinite="0" nextlayerid="12" nextobjectid="6">
  <tileset firstgid="1" source="placeholder_assets/Bunker_tiles.tsx"/>
  <layer id="5" name="Back_wall" width="50" height="50">
   <data encoding="csv">
@@ -55,6 +55,22 @@
 13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,13
 </data>
  </layer>
+ <objectgroup id="11" name="Levers_obj">
+  <object id="4" gid="41" x="1537.33" y="518.667" width="128" height="128">
+   <properties>
+    <property name="color" value="red"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="5" gid="37" x="1532" y="1158.67" width="128" height="128">
+   <properties>
+    <property name="color" value="red"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="6" name="Levers" width="50" height="50">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
