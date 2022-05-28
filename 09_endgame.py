@@ -1,9 +1,11 @@
 """
 Platformer Game
 """
+from pickle import NONE
 from xmlrpc.client import boolean
 import arcade
 import scripting.handle_collisions_action as collisions
+import scripting.puzzle as puzzle
 
 # Constants
 SCREEN_WIDTH = 1000
@@ -61,6 +63,8 @@ class MyGame(arcade.Window):
         self.collect_coin_sound = arcade.load_sound(":resources:sounds/coin1.wav")
         self.jump_sound = arcade.load_sound(":resources:sounds/jump1.wav")
 
+        self.wallsList = None
+
         arcade.set_background_color(arcade.csscolor.CORNFLOWER_BLUE)
 
     def setup(self):
@@ -89,6 +93,9 @@ class MyGame(arcade.Window):
 
             },
             'Blocking': {
+                'use_spatial_hash': True,
+            },
+            'Bridge': {
                 'use_spatial_hash': True,
             }
 
@@ -131,10 +138,11 @@ class MyGame(arcade.Window):
 
 
         # Create the 'physics engine'
+        self.wallsList = [self.scene["Platforms"],self.scene['Blocking']]
 
         self.physics_engine = arcade.PhysicsEnginePlatformer(
 
-            self.player_sprite, gravity_constant=GRAVITY, walls=(self.scene["Platforms"],self.scene['Blocking'])
+            self.player_sprite, gravity_constant=GRAVITY, walls=(self.wallsList)
 
         )
 
@@ -209,10 +217,9 @@ class MyGame(arcade.Window):
         # See if we hit any levers
         collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'])
 
-        # Check if all levers are flipped
-        if self.scene['Levers'][2].properties['flip'] == True:
-            for block in self.scene['Blocking']:
-                block.remove_from_sprite_lists()
+        puzzle.HandlePuzzle.leversDoor(self.scene['Levers'],self.scene['Blocking'])
+        
+        puzzle.HandlePuzzle.leversBridge(self.scene['Levers'],self.scene['Bridge'],self.physics_engine)
 
         # Position the camera
         self.center_camera_to_player()
