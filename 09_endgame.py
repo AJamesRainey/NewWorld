@@ -215,7 +215,7 @@ class MyGame(arcade.Window):
 
         # See if we hit any levers
         collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'])
-
+        collisions.HandleCollisions.DangerCollision(self.player_sprite, self.scene['Danger'])
         puzzle.HandlePuzzle.leversDoor(self.scene['Levers'],self.scene['Blocking'])
         
         puzzle.HandlePuzzle.leversBridge(self.scene['Levers'],self.scene['Bridge'],self.physics_engine)
