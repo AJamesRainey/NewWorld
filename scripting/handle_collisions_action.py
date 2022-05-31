@@ -41,8 +41,14 @@ class HandleCollisions():
         
         
 
-    def _handle_object_collision(self, cast):
-        pass
+    def DangerCollision(players, danger):
+        dangersHit = arcade.check_for_collision_with_list(
+            players,danger
+        )
+        for l in dangersHit:
+            arcade.Window.setup()
+
+            
         
     def _handle_game_over(self, cast):
         """Shows the 'game over' message and turns the snake and food white if the game is over.
