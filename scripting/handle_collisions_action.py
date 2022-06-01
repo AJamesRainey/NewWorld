@@ -32,11 +32,11 @@ class HandleCollisions():
                 if levers[int(l.properties['order']-1)].properties['flip']== True:
                     l.properties["flip"] = True
                     #Add flipped texture to list of textures then set to flipped.
-                    l.append_texture(arcade.load_texture("placeholder_assets\levers\lever_"+l.properties["color"]+"_down.png"))
+                    l.append_texture(arcade.load_texture("placeholder_assets/levers/lever_"+l.properties["color"]+"_down.png"))
                     l.set_texture(1)
             else:
                 l.properties["flip"] = True
-                l.append_texture(arcade.load_texture("placeholder_assets\levers\lever_"+l.properties["color"]+"_down.png"))
+                l.append_texture(arcade.load_texture("placeholder_assets/levers/lever_"+l.properties["color"]+"_down.png"))
                 l.set_texture(1)
         
         
