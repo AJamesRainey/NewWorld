@@ -46,7 +46,8 @@ class HandleCollisions():
             players,danger
         )
         for l in dangersHit:
-            arcade.Window.setup()
+            return True
+        return False
 
             
         
