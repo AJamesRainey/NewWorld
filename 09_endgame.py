@@ -42,7 +42,7 @@ class MyGame(arcade.Window):
         self.gui_camera = None
 
         # Keep track of the score
-        self.score = 0
+        self.level = 1
 
         # Load sounds
         self.collect_coin_sound = arcade.load_sound(":resources:sounds/coin1.wav")
@@ -89,7 +89,7 @@ class MyGame(arcade.Window):
 
         # Read in the tiled map
 
-        self.tile_map = arcade.load_tilemap(CONSTANT.MAP_NAME, CONSTANT.TILE_SCALING, layer_options)
+        self.tile_map = arcade.load_tilemap(f"level_{self.level}.tmx", CONSTANT.TILE_SCALING, layer_options)
 
 
 
@@ -101,7 +101,7 @@ class MyGame(arcade.Window):
 
 
         # Keep track of the score
-        self.score = 0
+        self.level = 1
 
         # Set up the player, specifically placing it at these coordinates.
         image_source = "Ozie/ozie_nomove.png"
@@ -150,7 +150,7 @@ class MyGame(arcade.Window):
         self.gui_camera.use()
 
         # Draw our score on the screen, scrolling it with the viewport
-        score_text = f"Score: {self.score}"
+        score_text = f"Score: {self.level}"
         arcade.draw_text(
             score_text,
             10,
