@@ -15,6 +15,3 @@ Andrew Morris
 Steve Briskey
 Aria Menke
 
-
-As of 03 June 2022:
-
