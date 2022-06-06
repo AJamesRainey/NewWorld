@@ -185,10 +185,6 @@ class MyGame(arcade.Window):
             self.player_sprite.change_x = -PLAYER_MOVEMENT_SPEED
         elif key == arcade.key.RIGHT or key == arcade.key.D:
             self.player_sprite.change_x = PLAYER_MOVEMENT_SPEED
-        elif key == arcade.key.E:            
-            collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'])
-            
-            puzzle.HandlePuzzle.leversBridge(self.scene['Levers'],self.scene['Bridge'],self.physics_engine)
 
     def on_key_release(self, key, modifiers):
         """Called when the user releases a key."""
@@ -218,12 +214,13 @@ class MyGame(arcade.Window):
         self.physics_engine.update()
 
         # See if we hit any levers
-        
+        collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'])
         death = collisions.HandleCollisions.DangerCollision(self.player_sprite, self.scene['Danger'])
         if death:
             self.setup()
-        
         puzzle.HandlePuzzle.leversDoor(self.scene['Levers'],self.scene['Blocking'])
+        
+        puzzle.HandlePuzzle.leversBridge(self.scene['Levers'],self.scene['Bridge'],self.physics_engine)
 
 
         # Position the camera

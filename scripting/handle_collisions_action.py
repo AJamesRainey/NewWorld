@@ -1,5 +1,5 @@
 import arcade
-import scripting.puzzle as puzzle
+
 
 class HandleCollisions():
     """
@@ -34,7 +34,6 @@ class HandleCollisions():
                     #Add flipped texture to list of textures then set to flipped.
                     l.append_texture(arcade.load_texture("placeholder_assets/levers/lever_"+l.properties["color"]+"_down.png"))
                     l.set_texture(1)
-                    
             else:
                 l.properties["flip"] = True
                 l.append_texture(arcade.load_texture("placeholder_assets/levers/lever_"+l.properties["color"]+"_down.png"))
