@@ -6,23 +6,7 @@ from xmlrpc.client import boolean
 import arcade
 import scripting.handle_collisions_action as collisions
 import scripting.puzzle as puzzle
-
-# Constants
-SCREEN_WIDTH = 1000
-SCREEN_HEIGHT = 650
-SCREEN_TITLE = "Platformer"
-
-# Constants used to scale our sprites from their original size
-CHARACTER_SCALING = 0.25
-TILE_SCALING = 0.5
-COIN_SCALING = 0.5
-SPRITE_PIXEL_SIZE = 128
-GRID_PIXEL_SIZE = SPRITE_PIXEL_SIZE * TILE_SCALING
-MAP_NAME = "proto_map2.tmx"
-# Movement speed of player, in pixels per frame
-PLAYER_MOVEMENT_SPEED = 10
-GRAVITY = 1
-PLAYER_JUMP_SPEED = 20
+import constants as CONSTANT
 
 
 class MyGame(arcade.Window):
@@ -33,7 +17,7 @@ class MyGame(arcade.Window):
     def __init__(self):
 
         # Call the parent class and set up the window
-        super().__init__(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
+        super().__init__(CONSTANT.SCREEN_WIDTH, CONSTANT.SCREEN_HEIGHT, CONSTANT.SCREEN_TITLE)
 
 
         # Our TileMap Object
@@ -104,7 +88,7 @@ class MyGame(arcade.Window):
 
         # Read in the tiled map
 
-        self.tile_map = arcade.load_tilemap(MAP_NAME, TILE_SCALING, layer_options)
+        self.tile_map = arcade.load_tilemap(CONSTANT.MAP_NAME, CONSTANT.TILE_SCALING, layer_options)
 
 
 
@@ -120,7 +104,7 @@ class MyGame(arcade.Window):
 
         # Set up the player, specifically placing it at these coordinates.
         image_source = "Ozie/ozie_nomove.png"
-        self.player_sprite = arcade.Sprite(image_source, CHARACTER_SCALING)
+        self.player_sprite = arcade.Sprite(image_source, CONSTANT.CHARACTER_SCALING)
         self.player_sprite.center_x = 128
         self.player_sprite.center_y = 2944
         self.scene.add_sprite("Player", self.player_sprite)
@@ -141,7 +125,7 @@ class MyGame(arcade.Window):
 
         self.physics_engine = arcade.PhysicsEnginePlatformer(
 
-            self.player_sprite, gravity_constant=GRAVITY, walls=(self.wallsList)
+            self.player_sprite, gravity_constant=CONSTANT.GRAVITY, walls=(self.wallsList)
 
         )
 
@@ -179,12 +163,12 @@ class MyGame(arcade.Window):
 
         if key == arcade.key.UP or key == arcade.key.W:
             if self.physics_engine.can_jump():
-                self.player_sprite.change_y = PLAYER_JUMP_SPEED
+                self.player_sprite.change_y = CONSTANT.PLAYER_JUMP_SPEED
                 arcade.play_sound(self.jump_sound)
         elif key == arcade.key.LEFT or key == arcade.key.A:
-            self.player_sprite.change_x = -PLAYER_MOVEMENT_SPEED
+            self.player_sprite.change_x = -CONSTANT.PLAYER_MOVEMENT_SPEED
         elif key == arcade.key.RIGHT or key == arcade.key.D:
-            self.player_sprite.change_x = PLAYER_MOVEMENT_SPEED
+            self.player_sprite.change_x = CONSTANT.PLAYER_MOVEMENT_SPEED
         elif key == arcade.key.E:
              collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'])
 
