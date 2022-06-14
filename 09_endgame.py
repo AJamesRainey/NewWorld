@@ -106,7 +106,7 @@ class MyGame(arcade.Window):
         image_source = "Ozie/ozie_nomove.png"
         self.player_sprite = arcade.Sprite(image_source, CONSTANT.CHARACTER_SCALING)
         self.player_sprite.center_x = 128
-        self.player_sprite.center_y = 2944
+        self.player_sprite.center_y = 1744
         self.scene.add_sprite("Player", self.player_sprite)
 
 
