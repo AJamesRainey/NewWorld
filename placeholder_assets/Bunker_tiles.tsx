@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.8" tiledversion="1.8.4" name="Bunker_tiles" tilewidth="1536" tileheight="768" tilecount="52" columns="0">
+<tileset version="1.8" tiledversion="1.8.4" name="Bunker_tiles" tilewidth="1536" tileheight="768" tilecount="99" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="12">
   <image width="128" height="128" source="light_gray.png"/>
@@ -180,5 +180,146 @@
  </tile>
  <tile id="64">
   <image width="256" height="256" source="placeholder_passage.png"/>
+ </tile>
+ <tile id="65">
+  <image width="128" height="128" source="math/0.png"/>
+ </tile>
+ <tile id="66">
+  <image width="128" height="128" source="math/1.png"/>
+ </tile>
+ <tile id="67">
+  <image width="128" height="128" source="math/2.png"/>
+ </tile>
+ <tile id="68">
+  <image width="128" height="128" source="math/3.png"/>
+ </tile>
+ <tile id="69">
+  <image width="128" height="128" source="math/4.png"/>
+ </tile>
+ <tile id="70">
+  <image width="128" height="128" source="math/5.png"/>
+ </tile>
+ <tile id="71">
+  <image width="128" height="128" source="math/6.png"/>
+ </tile>
+ <tile id="72">
+  <image width="128" height="128" source="math/7.png"/>
+ </tile>
+ <tile id="73">
+  <image width="128" height="128" source="math/8.png"/>
+ </tile>
+ <tile id="74">
+  <image width="128" height="128" source="math/9.png"/>
+ </tile>
+ <tile id="75">
+  <image width="128" height="128" source="math/blank.png"/>
+ </tile>
+ <tile id="76">
+  <image width="128" height="128" source="math/divided_by.png"/>
+ </tile>
+ <tile id="77">
+  <image width="128" height="128" source="math/equals.png"/>
+ </tile>
+ <tile id="78">
+  <image width="128" height="128" source="math/minus.png"/>
+ </tile>
+ <tile id="79">
+  <image width="128" height="128" source="math/multiplied_by.png"/>
+ </tile>
+ <tile id="80">
+  <image width="128" height="128" source="math/parentheses.png"/>
+ </tile>
+ <tile id="81">
+  <image width="128" height="128" source="math/plus.png"/>
+ </tile>
+ <tile id="82">
+  <image width="256" height="256" source="cables/cable_corner_1.png"/>
+ </tile>
+ <tile id="83">
+  <image width="256" height="256" source="cables/cable_corner_1_blue.png"/>
+ </tile>
+ <tile id="84">
+  <image width="256" height="256" source="cables/cable_corner_1_green.png"/>
+ </tile>
+ <tile id="85">
+  <image width="256" height="256" source="cables/cable_corner_1_red.png"/>
+ </tile>
+ <tile id="86">
+  <image width="256" height="256" source="cables/cable_corner_1_yellow.png"/>
+ </tile>
+ <tile id="87">
+  <image width="256" height="256" source="cables/cable_corner_2.png"/>
+ </tile>
+ <tile id="88">
+  <image width="256" height="256" source="cables/cable_corner_2_blue.png"/>
+ </tile>
+ <tile id="89">
+  <image width="256" height="256" source="cables/cable_corner_2_green.png"/>
+ </tile>
+ <tile id="90">
+  <image width="256" height="256" source="cables/cable_corner_2_red.png"/>
+ </tile>
+ <tile id="91">
+  <image width="256" height="256" source="cables/cable_corner_2_yellow.png"/>
+ </tile>
+ <tile id="92">
+  <image width="256" height="256" source="cables/cable_end_1.png"/>
+ </tile>
+ <tile id="93">
+  <image width="256" height="256" source="cables/cable_end_1_blue.png"/>
+ </tile>
+ <tile id="94">
+  <image width="256" height="256" source="cables/cable_end_1_green.png"/>
+ </tile>
+ <tile id="95">
+  <image width="256" height="256" source="cables/cable_end_1_red.png"/>
+ </tile>
+ <tile id="96">
+  <image width="256" height="256" source="cables/cable_end_1_yellow.png"/>
+ </tile>
+ <tile id="97">
+  <image width="256" height="256" source="cables/cable_end_2.png"/>
+ </tile>
+ <tile id="98">
+  <image width="256" height="256" source="cables/cable_end_2_blue.png"/>
+ </tile>
+ <tile id="99">
+  <image width="256" height="256" source="cables/cable_end_2_green.png"/>
+ </tile>
+ <tile id="100">
+  <image width="256" height="256" source="cables/cable_end_2_red.png"/>
+ </tile>
+ <tile id="101">
+  <image width="256" height="256" source="cables/cable_end_2_yellow.png"/>
+ </tile>
+ <tile id="102">
+  <image width="256" height="256" source="cables/cable_str.png"/>
+ </tile>
+ <tile id="103">
+  <image width="256" height="256" source="cables/cable_str_blue.png"/>
+ </tile>
+ <tile id="104">
+  <image width="256" height="256" source="cables/cable_str_green.png"/>
+ </tile>
+ <tile id="105">
+  <image width="256" height="256" source="cables/cable_str_red.png"/>
+ </tile>
+ <tile id="106">
+  <image width="256" height="256" source="cables/cable_str_yellow.png"/>
+ </tile>
+ <tile id="107">
+  <image width="256" height="256" source="cables/cable_str2.png"/>
+ </tile>
+ <tile id="108">
+  <image width="256" height="256" source="cables/cable_str3.png"/>
+ </tile>
+ <tile id="109">
+  <image width="128" height="128" source="placeholder_chair.png"/>
+ </tile>
+ <tile id="110">
+  <image width="128" height="128" source="placeholder_table.png"/>
+ </tile>
+ <tile id="111">
+  <image width="128" height="128" source="math/parentheses_2.png"/>
  </tile>
 </tileset>
