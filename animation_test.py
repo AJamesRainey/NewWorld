@@ -14,7 +14,7 @@ SCREEN_TITLE = "Animation Test"
 
 # Constants used to scale our sprites from their original size
 TILE_SCALING = 0.5
-CHARACTER_SCALING = 0.25
+CHARACTER_SCALING = 1
 COIN_SCALING = TILE_SCALING
 SPRITE_PIXEL_SIZE = 128
 GRID_PIXEL_SIZE = SPRITE_PIXEL_SIZE * TILE_SCALING
@@ -81,7 +81,7 @@ class PlayerCharacter(arcade.Sprite):
 
         # Load textures for walking
         self.walk_textures = []
-        for i in range(1, 9):
+        for i in range(24):
             texture = load_texture_pair(f"{main_path}/ozie_walk_stick/ozie_walk_stick_{i}.png")
             self.walk_textures.append(texture)
 
@@ -136,7 +136,7 @@ class PlayerCharacter(arcade.Sprite):
 
         # Walking animation
         self.cur_texture += 1
-        if self.cur_texture > 7:
+        if self.cur_texture > 23:
             self.cur_texture = 0
         self.texture = self.walk_textures[self.cur_texture][
             self.character_face_direction
