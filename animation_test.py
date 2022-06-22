@@ -14,7 +14,7 @@ SCREEN_TITLE = "Animation Test"
 
 # Constants used to scale our sprites from their original size
 TILE_SCALING = 0.5
-CHARACTER_SCALING = 1
+CHARACTER_SCALING = 1.5
 COIN_SCALING = TILE_SCALING
 SPRITE_PIXEL_SIZE = 128
 GRID_PIXEL_SIZE = SPRITE_PIXEL_SIZE * TILE_SCALING
@@ -75,7 +75,7 @@ class PlayerCharacter(arcade.Sprite):
         main_path = "Ozie"
 
         # Load textures for idle standing
-        self.idle_texture_pair = load_texture_pair(f"{main_path}/ozie_nomove.png")
+        self.idle_texture_pair = load_texture_pair(f"{main_path}/ozie_standing_basic.png")
         #self.jump_texture_pair = load_texture_pair(f"{main_path}_jump.png")
         #self.fall_texture_pair = load_texture_pair(f"{main_path}_fall.png")
 
