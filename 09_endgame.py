@@ -19,6 +19,8 @@ class MyGame(arcade.Window):
         # Call the parent class and set up the window
         super().__init__(CONSTANT.SCREEN_WIDTH, CONSTANT.SCREEN_HEIGHT, CONSTANT.SCREEN_TITLE)
 
+        # This is the stage that your on.
+        self.stage_num = 1
 
         # Our TileMap Object
 
@@ -87,8 +89,9 @@ class MyGame(arcade.Window):
 
 
         # Read in the tiled map
+        # map_name = f":resources:tiled_maps/map2_level_{self.level}.json"
 
-        self.tile_map = arcade.load_tilemap(CONSTANT.MAP_NAME, CONSTANT.TILE_SCALING, layer_options)
+        self.tile_map = arcade.load_tilemap(f"Stage_{self.stage_num}.tmx", CONSTANT.TILE_SCALING, layer_options)
 
 
 
@@ -204,6 +207,10 @@ class MyGame(arcade.Window):
        
         death = collisions.HandleCollisions.DangerCollision(self.player_sprite, self.scene['Danger'])
         if death:
+            self.setup()
+        portal = collisions.HandleCollisions.PortalCollision(self.player_sprite, self.scene['Portal'])
+        if portal:
+            self.stage_num +=1
             self.setup()
         puzzle.HandlePuzzle.leversDoor(self.scene['Levers'],self.scene['Blocking'])
         

@@ -48,6 +48,14 @@ class HandleCollisions():
         for l in dangersHit:
             return True
         return False
+    
+    def PortalCollision(players, portal):
+        portalHit = arcade.check_for_collision_with_list(
+            players,portal
+        )
+        for l in portalHit:
+            return True
+        return False
 
             
         
