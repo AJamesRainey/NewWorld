@@ -20,7 +20,7 @@ class MyGame(arcade.Window):
         super().__init__(CONSTANT.SCREEN_WIDTH, CONSTANT.SCREEN_HEIGHT, CONSTANT.SCREEN_TITLE)
 
         # This is the stage that your on.
-        self.stage_num = 1
+        self.stage_num = 2
 
         # Our TileMap Object
 
@@ -90,8 +90,24 @@ class MyGame(arcade.Window):
 
         # Read in the tiled map
         # map_name = f":resources:tiled_maps/map2_level_{self.level}.json"
-
-        self.tile_map = arcade.load_tilemap(f"Stage_{self.stage_num}.tmx", CONSTANT.TILE_SCALING, layer_options)
+        if self.stage_num == 0:
+            self.tile_map = arcade.load_tilemap(f"start_screen.tmx", CONSTANT.TILE_SCALING, layer_options)
+        elif self.stage_num == 1:
+            self.tile_map = arcade.load_tilemap(f"Stage_{self.stage_num}.tmx", CONSTANT.TILE_SCALING, layer_options)
+        elif self.stage_num == 2:
+            self.tile_map = arcade.load_tilemap(f"Stage_1.tmx", CONSTANT.TILE_SCALING, layer_options)
+        elif self.stage_num == 3:
+            self.tile_map = arcade.load_tilemap(f"Stage_2.tmx", CONSTANT.TILE_SCALING, layer_options)
+        elif self.stage_num == 4:
+            self.tile_map = arcade.load_tilemap(f"Stage_3.tmx", CONSTANT.TILE_SCALING, layer_options)
+        elif self.stage_num == 5:
+            self.tile_map = arcade.load_tilemap(f"Stage_4.tmx", CONSTANT.TILE_SCALING, layer_options)
+        elif self.stage_num == 6:
+            self.tile_map = arcade.load_tilemap(f"Stage_5.tmx", CONSTANT.TILE_SCALING, layer_options)
+        elif self.stage_num == 7:
+            self.tile_map = arcade.load_tilemap(f"Stage_.tmx", CONSTANT.TILE_SCALING, layer_options)
+        elif self.stage_num == 10:
+            self.tile_map = arcade.load_tilemap(f"you_died.tmx", CONSTANT.TILE_SCALING, layer_options)
 
 
 
