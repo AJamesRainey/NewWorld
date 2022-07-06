@@ -91,7 +91,8 @@ class MyGame(arcade.Window):
         # Read in the tiled map
         # map_name = f":resources:tiled_maps/map2_level_{self.level}.json"
 
-        self.tile_map = arcade.load_tilemap(f"Stage_{self.stage_num}.tmx", CONSTANT.TILE_SCALING, layer_options)
+        self.tile_map = arcade.load_tilemap(f"maps/stage_0.tmx", CONSTANT.TILE_SCALING, layer_options)
+        # self.tile_map = arcade.load_tilemap(f"Stage_{self.stage_num}.tmx", CONSTANT.TILE_SCALING, layer_options)
 
 
 
