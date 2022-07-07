@@ -23,7 +23,7 @@ class MyGame(arcade.Window):
         self.point_y = 1744
 
         # This is the stage that your on.
-        self.stage_num = 0
+        self.stage_num = 2
 
         # Our TileMap Object
 
