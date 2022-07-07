@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.8" tiledversion="1.8.4" name="Bunker_tiles" tilewidth="1536" tileheight="768" tilecount="99" columns="0">
+<tileset version="1.8" tiledversion="1.8.4" name="Bunker_tiles" tilewidth="1536" tileheight="768" tilecount="124" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="12">
   <image width="128" height="128" source="light_gray.png"/>
@@ -321,5 +321,80 @@
  </tile>
  <tile id="111">
   <image width="128" height="128" source="math/parentheses_2.png"/>
+ </tile>
+ <tile id="112">
+  <image width="256" height="256" source="cables/cable_corner_3.png"/>
+ </tile>
+ <tile id="113">
+  <image width="256" height="256" source="cables/cable_corner_4.png"/>
+ </tile>
+ <tile id="114">
+  <image width="256" height="256" source="cables/cable_corner_5.png"/>
+ </tile>
+ <tile id="115">
+  <image width="256" height="256" source="cables/cable_corner_6.png"/>
+ </tile>
+ <tile id="116">
+  <image width="256" height="256" source="cables/cable_corner_7.png"/>
+ </tile>
+ <tile id="117">
+  <image width="256" height="256" source="cables/cable_corner_8.png"/>
+ </tile>
+ <tile id="118">
+  <image width="256" height="256" source="cables/cable_end_3.png"/>
+ </tile>
+ <tile id="119">
+  <image width="256" height="256" source="cables/cable_end_4.png"/>
+ </tile>
+ <tile id="120">
+  <image width="256" height="256" source="cables/cable_end_5.png"/>
+ </tile>
+ <tile id="121">
+  <image width="256" height="256" source="cables/cable_end_6.png"/>
+ </tile>
+ <tile id="122">
+  <image width="256" height="256" source="cables/cable_end_7.png"/>
+ </tile>
+ <tile id="123">
+  <image width="256" height="256" source="cables/cable_end_8.png"/>
+ </tile>
+ <tile id="124">
+  <image width="256" height="256" source="cables/cable_str4.png"/>
+ </tile>
+ <tile id="125">
+  <image width="128" height="128" source="placeholder_chair_sideway.png"/>
+ </tile>
+ <tile id="126">
+  <image width="128" height="128" source="computers/computer_terminal_broken_sideways.png"/>
+ </tile>
+ <tile id="127">
+  <image width="128" height="128" source="light_gray_exit.png"/>
+ </tile>
+ <tile id="128">
+  <image width="128" height="128" source="placeholder_edge_platform_2.png"/>
+ </tile>
+ <tile id="129">
+  <image width="128" height="128" source="placeholder_angled_platform_2.png"/>
+ </tile>
+ <tile id="130">
+  <image width="128" height="128" source="placeholder_corner_platform_2.png"/>
+ </tile>
+ <tile id="131">
+  <image width="128" height="128" source="light_gray_exit_2.png"/>
+ </tile>
+ <tile id="132">
+  <image width="128" height="128" source="light_gray_exit_3.png"/>
+ </tile>
+ <tile id="133">
+  <image width="128" height="128" source="light_gray_exit_4.png"/>
+ </tile>
+ <tile id="134">
+  <image width="128" height="128" source="light_gray_escape.png"/>
+ </tile>
+ <tile id="135">
+  <image width="128" height="128" source="light_gray_pull.png"/>
+ </tile>
+ <tile id="136">
+  <image width="128" height="128" source="light_gray_solve.png"/>
  </tile>
 </tileset>

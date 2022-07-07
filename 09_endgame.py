@@ -19,8 +19,11 @@ class MyGame(arcade.Window):
         # Call the parent class and set up the window
         super().__init__(CONSTANT.SCREEN_WIDTH, CONSTANT.SCREEN_HEIGHT, CONSTANT.SCREEN_TITLE)
 
+        self.point_x = 128
+        self.point_y = 1744
+
         # This is the stage that your on.
-        self.stage_num = 2
+        self.stage_num = 0
 
         # Our TileMap Object
 
@@ -91,7 +94,7 @@ class MyGame(arcade.Window):
         # Read in the tiled map
         # map_name = f":resources:tiled_maps/map2_level_{self.level}.json"
         if self.stage_num == 0:
-            self.tile_map = arcade.load_tilemap(f"start_screen.tmx", CONSTANT.TILE_SCALING, layer_options)
+            self.tile_map = arcade.load_tilemap(f"maps\start-screen.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 1:
             self.tile_map = arcade.load_tilemap(f"Stage_{self.stage_num}.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 2:
@@ -124,8 +127,8 @@ class MyGame(arcade.Window):
         # Set up the player, specifically placing it at these coordinates.
         image_source = "Ozie/ozie_nomove.png"
         self.player_sprite = arcade.Sprite(image_source, CONSTANT.CHARACTER_SCALING)
-        self.player_sprite.center_x = 128
-        self.player_sprite.center_y = 1744
+        self.player_sprite.center_x = self.point_x
+        self.player_sprite.center_y = self.point_y
         self.scene.add_sprite("Player", self.player_sprite)
 
 
@@ -227,7 +230,14 @@ class MyGame(arcade.Window):
         portal = collisions.HandleCollisions.PortalCollision(self.player_sprite, self.scene['Portal'])
         if portal:
             self.stage_num +=1
+            self.point_x = 128
+            self.point_y = 1744
             self.setup()
+        checkpoint = collisions.HandleCollisions.CheckpointCollision(self.player_sprite, self.scene['Checkpoint'])
+        if checkpoint:
+            self.point_x = self.player_sprite.center_x
+            self.point_y = self.player_sprite.center_y
+        
         puzzle.HandlePuzzle.leversDoor(self.scene['Levers'],self.scene['Blocking'])
         
         puzzle.HandlePuzzle.leversBridge(self.scene['Levers'],self.scene['Bridge'],self.physics_engine)
