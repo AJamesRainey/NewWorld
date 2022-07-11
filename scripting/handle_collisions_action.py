@@ -57,6 +57,14 @@ class HandleCollisions():
             return True
         return False
 
+    def CheckpointCollision(players, checkpoint):
+        checkpointHit = arcade.check_for_collision_with_list(
+            players,checkpoint
+        )
+        for l in checkpointHit:
+            return True
+        return False
+
             
         
     def _handle_game_over(self, cast):
