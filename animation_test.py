@@ -71,18 +71,18 @@ class PlayerCharacter(arcade.Sprite):
 
         # --- Load Textures ---
 
-        # Images from Kenney.nl's Asset Pack 3
+        # Images from desired sprite folder
         main_path = "Ozie"
 
         # Load textures for idle standing
-        self.idle_texture_pair = load_texture_pair(f"{main_path}/ozie_standing_basic.png")
+        self.idle_texture_pair = load_texture_pair(f"{main_path}/ozie_final_idle/ozie_final_idle_0.png")
         #self.jump_texture_pair = load_texture_pair(f"{main_path}_jump.png")
         #self.fall_texture_pair = load_texture_pair(f"{main_path}_fall.png")
 
         # Load textures for walking
         self.walk_textures = []
-        for i in range(24):
-            texture = load_texture_pair(f"{main_path}/ozie_walk_stick/ozie_walk_stick_{i}.png")
+        for i in range(16):
+            texture = load_texture_pair(f"{main_path}/ozie_final_walk/ozie_final_walk_{i}.png")
             self.walk_textures.append(texture)
 
         # Load textures for climbing
@@ -136,7 +136,7 @@ class PlayerCharacter(arcade.Sprite):
 
         # Walking animation
         self.cur_texture += 1
-        if self.cur_texture > 23:
+        if self.cur_texture > 15:
             self.cur_texture = 0
         self.texture = self.walk_textures[self.cur_texture][
             self.character_face_direction
