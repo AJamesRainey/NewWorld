@@ -261,7 +261,7 @@ class MyGame(arcade.Window):
                     #             n.set_texture(1)
                     # else: 
                     #     for n in self.scene['Problem_Screen']:
-                    #         if n.properties["order"] == len(self.num_list + 4):
+                    #         if n.properties["order"] > 4:
                     #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list) + 3])}.png"))
                     #             n.set_texture(1)
     def on_key_release(self, key, modifiers):
