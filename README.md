@@ -5,13 +5,18 @@ A game of basic math where a robot goes through different levels. The robot inte
 
 Development Environment:
 VS Code
+
 Language:
 Python w/ Arcade
-Team members:
 
-Leslie Cruz Ceron
-James Rainey 
-Andrew Morris
-Steve Briskey
-Aria Menke
+Aria Menke: Game Lead / Lead Artist
+
+Leslie Cruz Ceron: Producer / Graphic Designer
+
+James Rainey: Configuration Manager / Lead Programmer
+
+Andrew Morris: Writer / Programmer
+
+Steve Briskey: Quality Controller / Morale Officer
+
 
