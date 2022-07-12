@@ -254,8 +254,16 @@ class MyGame(arcade.Window):
                         l.append_texture(arcade.load_texture("placeholder_assets/levers/lever_"+l.properties["color"]+"_up.png"))
                         l.set_texture(0)
                         print(l)
-                    # 
+                    # if self.block == True:
+                    #     for n in self.scene['Problem_Screen']:
 
+                    #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list)-1])}.png"))
+                    #             n.set_texture(1)
+                    # else: 
+                    #     for n in self.scene['Problem_Screen']:
+                    #         if n.properties["order"] == len(self.num_list + 4):
+                    #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list) + 3])}.png"))
+                    #             n.set_texture(1)
     def on_key_release(self, key, modifiers):
         """Called when the user releases a key."""
 
