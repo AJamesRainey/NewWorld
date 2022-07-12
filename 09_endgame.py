@@ -109,8 +109,6 @@ class MyGame(arcade.Window):
         elif self.stage_num == 5:
             self.tile_map = arcade.load_tilemap(f"Stage_4.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 6:
-            self.tile_map = arcade.load_tilemap(f"Stage_5.tmx", CONSTANT.TILE_SCALING, layer_options)
-        elif self.stage_num == 7:
             self.tile_map = arcade.load_tilemap(f"Stage_.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 10:
             self.tile_map = arcade.load_tilemap(f"you_died.tmx", CONSTANT.TILE_SCALING, layer_options)
@@ -245,7 +243,7 @@ class MyGame(arcade.Window):
                 elif self.num_list[0] == 4 and self.num_list[1] == 3 and self.num_list[2] == 3 and self.num_list[3] == 2 and self.stage_num == 5:  
                     self.block = False
                     self.num_list.clear()
-                elif self.num_list[0] == 2 and self.num_list[1] == 3 and self.num_list[2] == 5 and self.num_list[3] == 9 and self.stage_num == 5:
+                elif self.num_list[0] == 5 and self.num_list[1] == 5 and self.num_list[2] == 3 and self.num_list[3] == 9 and self.stage_num == 5:
                     self.bridge = True
                     self.num_list.clear()
                 else:

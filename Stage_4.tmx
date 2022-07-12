@@ -69,64 +69,6 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="11" name="Levers">
-  <object id="4" name="red1" gid="41" x="4357.33" y="1278.67" width="128" height="128">
-   <properties>
-    <property name="color" value="red"/>
-    <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="3"/>
-   </properties>
-  </object>
-  <object id="17" name="yellow1" gid="43" x="2175.74" y="1288.28" width="128" height="128">
-   <properties>
-    <property name="color" value="yellow"/>
-    <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="5" name="blue1" gid="37" x="1408" y="1282.67" width="128" height="128">
-   <properties>
-    <property name="color" value="blue"/>
-    <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="2"/>
-   </properties>
-  </object>
-  <object id="6" name="green1" gid="39" x="894.67" y="902.67" width="128" height="128">
-   <properties>
-    <property name="color" value="green"/>
-    <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="3"/>
-   </properties>
-  </object>
-  <object id="8" name="red2" gid="41" x="893.04" y="2949.95" width="128" height="128">
-   <properties>
-    <property name="color" value="red"/>
-    <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="9" name="blue2" gid="37" x="1147.4" y="2946.4" width="128" height="128">
-   <properties>
-    <property name="color" value="blue"/>
-    <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="10" name="green2" gid="39" x="1407.47" y="2945.95" width="128" height="128">
-   <properties>
-    <property name="color" value="green"/>
-    <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="6"/>
-   </properties>
-  </object>
-  <object id="11" name="yellow2" gid="43" x="643.33" y="2944.17" width="128" height="128">
-   <properties>
-    <property name="color" value="yellow"/>
-    <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="7"/>
-   </properties>
-  </object>
- </objectgroup>
  <layer id="10" name="Portal" width="50" height="30">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -161,6 +103,64 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
+ <objectgroup id="11" name="Levers">
+  <object id="4" name="red1" gid="41" x="4357.33" y="1278.67" width="128" height="128">
+   <properties>
+    <property name="color" value="red"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="17" name="yellow1" gid="43" x="2175.74" y="1288.28" width="128" height="128">
+   <properties>
+    <property name="color" value="yellow"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="5" name="blue1" gid="37" x="1408" y="1282.67" width="128" height="128">
+   <properties>
+    <property name="color" value="blue"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="6" name="green1" gid="39" x="894.67" y="902.67" width="128" height="128">
+   <properties>
+    <property name="color" value="green"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="8" name="red2" gid="41" x="893.04" y="2949.95" width="128" height="128">
+   <properties>
+    <property name="color" value="red"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="9" name="blue2" gid="37" x="1147.4" y="2946.4" width="128" height="128">
+   <properties>
+    <property name="color" value="blue"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="10" name="green2" gid="39" x="1407.47" y="2945.95" width="128" height="128">
+   <properties>
+    <property name="color" value="green"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="11" name="yellow2" gid="43" x="643.33" y="2944.17" width="128" height="128">
+   <properties>
+    <property name="color" value="yellow"/>
+    <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="9"/>
+   </properties>
+  </object>
+ </objectgroup>
  <objectgroup id="17" name="Problem_Screen"/>
  <layer id="9" name="Screens" width="50" height="30">
   <data encoding="csv">
@@ -321,8 +321,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,75,0,71,0,69,0,71,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,76,80,76,79,76,82,76,78,69,67,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
