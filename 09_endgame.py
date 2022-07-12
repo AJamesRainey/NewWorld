@@ -140,7 +140,7 @@ class MyGame(arcade.Window):
         self.point_y = 1744
 
         # This is the stage that you're on.
-        self.stage_num = 2
+        self.stage_num = 1
 
         self.num_list = []
 
@@ -231,10 +231,8 @@ class MyGame(arcade.Window):
 
         # Read in the tiled map
         # map_name = f":resources:tiled_maps/map2_level_{self.level}.json"
-        if self.stage_num == 0:
+        if self.stage_num == 1:
             self.tile_map = arcade.load_tilemap(f"maps/start_screen2.tmx", CONSTANT.TILE_SCALING, layer_options)
-        elif self.stage_num == 1:
-            self.tile_map = arcade.load_tilemap(f"Stage_{self.stage_num}.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 2:
             self.tile_map = arcade.load_tilemap(f"Stage_1.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 3:
@@ -486,10 +484,10 @@ class MyGame(arcade.Window):
             self.point_x = self.player_sprite.center_x
             self.point_y = self.player_sprite.center_y
         
-        if self.stage_num >= 1:
-            puzzle.HandlePuzzle.leversDoor(self.scene['Levers'],self.scene['Blocking'])
-            
-            puzzle.HandlePuzzle.leversBridge(self.scene['Levers'],self.scene['Bridge'],self.physics_engine)
+        if self.block == False:
+            puzzle.HandlePuzzle.leversDoor(self.block,self.scene['Blocking'])
+        if self.bridge == True:
+            puzzle.HandlePuzzle.leversBridge(self.bridge,self.scene['Bridge'],self.physics_engine)
 
 
         # Position the camera

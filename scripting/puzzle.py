@@ -14,7 +14,7 @@ class HandlePuzzle():
     def leversBridge(levers,bridge,physicsEngine):
         #check if all levers are flipped for bridge
         # if levers[7].properties['flip'] == True and bridge.visible == False:
-        if levers == True and bridge.visible == False:
+        if bridge.visible == False:
 
             bridge.visible = True
             #self.wallsList.append(self.scene['Bridge'])
