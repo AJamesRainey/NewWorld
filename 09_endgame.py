@@ -19,8 +19,16 @@ class MyGame(arcade.Window):
         # Call the parent class and set up the window
         super().__init__(CONSTANT.SCREEN_WIDTH, CONSTANT.SCREEN_HEIGHT, CONSTANT.SCREEN_TITLE)
 
+        self.point_x = 128
+        self.point_y = 1744
+
         # This is the stage that your on.
         self.stage_num = 2
+
+        self.num_list = []
+
+        self.block = True
+        self.bridge = False
 
         # Our TileMap Object
 
@@ -61,7 +69,7 @@ class MyGame(arcade.Window):
         self.gui_camera = arcade.Camera(self.width, self.height)
 
 
-        # Name of map file to load
+        # Name of map file to loads
 
 
         # Layer specific options are defined based on Layer names in a dictionary
@@ -90,10 +98,8 @@ class MyGame(arcade.Window):
 
         # Read in the tiled map
         # map_name = f":resources:tiled_maps/map2_level_{self.level}.json"
-        if self.stage_num == 0:
-            self.tile_map = arcade.load_tilemap(f"start_screen.tmx", CONSTANT.TILE_SCALING, layer_options)
-        elif self.stage_num == 1:
-            self.tile_map = arcade.load_tilemap(f"Stage_{self.stage_num}.tmx", CONSTANT.TILE_SCALING, layer_options)
+        if self.stage_num == 1:
+            self.tile_map = arcade.load_tilemap(f"maps\start-screen-01.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 2:
             self.tile_map = arcade.load_tilemap(f"Stage_1.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 3:
@@ -103,8 +109,6 @@ class MyGame(arcade.Window):
         elif self.stage_num == 5:
             self.tile_map = arcade.load_tilemap(f"Stage_4.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 6:
-            self.tile_map = arcade.load_tilemap(f"Stage_5.tmx", CONSTANT.TILE_SCALING, layer_options)
-        elif self.stage_num == 7:
             self.tile_map = arcade.load_tilemap(f"Stage_.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 10:
             self.tile_map = arcade.load_tilemap(f"you_died.tmx", CONSTANT.TILE_SCALING, layer_options)
@@ -124,8 +128,8 @@ class MyGame(arcade.Window):
         # Set up the player, specifically placing it at these coordinates.
         image_source = "Ozie/ozie_nomove.png"
         self.player_sprite = arcade.Sprite(image_source, CONSTANT.CHARACTER_SCALING)
-        self.player_sprite.center_x = 128
-        self.player_sprite.center_y = 1744
+        self.player_sprite.center_x = self.point_x
+        self.player_sprite.center_y = self.point_y
         self.scene.add_sprite("Player", self.player_sprite)
 
 
@@ -189,9 +193,77 @@ class MyGame(arcade.Window):
         elif key == arcade.key.RIGHT or key == arcade.key.D:
             self.player_sprite.change_x = CONSTANT.PLAYER_MOVEMENT_SPEED
         elif key == arcade.key.E:
-             collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'])
+            col_num = collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'])
+            if col_num == None:
+                pass
+            else:
+                self.num_list.append(col_num)
+            for n in self.num_list:
+                if n == None:
+                    del self.num_list[n]
+            # if self.block == True:
+            #     self.block = collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'], self.block)
+            # else: 
+            #     self.bridge = collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'], self.block)
+            print(self.num_list)
+            # if self.block == True:
+            #     for n in self.scene['Problem_Screen']:
+            #         if n.properties["order"] == len(self.num_list):
+            #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list)-1])}.png"))
+            #             n.set_texture(1)
+            # else: 
+            #     for n in self.scene['Problem_Screen']:
+            #         if n.properties["order"] == len(self.num_list + 4):
+            #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list) + 3])}.png"))
+            #             n.set_texture(1)
+            if len(self.num_list) == 4:
+                # if self.stage_num == 2:
+                # stage 1
+                if self.num_list[0] == 1 and self.num_list[1] == 9 and self.num_list[2] == 2 and self.num_list[3] == 7 and self.stage_num == 2:
+                    self.block = False
+                    self.num_list.clear()     
+                elif self.num_list[0] == 7 and self.num_list[1] == 4 and self.num_list[2] == 3 and self.num_list[3] == 2 and self.stage_num == 2:   
+                    self.bridge = True
+                    self.num_list.clear()
+                # Stage 2
+                elif self.num_list[0] == 2 and self.num_list[1] == 9 and self.num_list[2] == 6 and self.num_list[3] == 1 and self.stage_num == 3:  
+                    self.block = False
+                    self.num_list.clear()
+                elif self.num_list[0] == 2 and self.num_list[1] == 3 and self.num_list[2] == 5 and self.num_list[3] == 9 and self.stage_num == 3:
+                    self.bridge = True
+                    self.num_list.clear()
+                # Stage 3
+                elif ((self.num_list[0] == 1 and self.num_list[1] == 3) or (self.num_list[0] == 3 and self.num_list[1] == 1)) and self.num_list[2] == 2 and self.num_list[3] == 4 and self.stage_num == 4:  
+                    self.block = False
+                    self.num_list.clear()
+                elif ((self.num_list[0] == 6 and self.num_list[1] == 8) or (self.num_list[0] == 8 and self.num_list[1] == 6)) and ((self.num_list[2] == 4 and self.num_list[3] == 3) or (self.num_list[2] == 3 and self.num_list[3] == 4)) and self.stage_num == 4:
+                    self.bridge = True
+                    self.num_list.clear()
+                # Stage 4
+                elif self.num_list[0] == 4 and self.num_list[1] == 3 and self.num_list[2] == 3 and self.num_list[3] == 2 and self.stage_num == 5:  
+                    self.block = False
+                    self.num_list.clear()
+                elif self.num_list[0] == 5 and self.num_list[1] == 5 and self.num_list[2] == 3 and self.num_list[3] == 9 and self.stage_num == 5:
+                    self.bridge = True
+                    self.num_list.clear()
+                else:
+                    self.num_list.clear()
+                    print("working")
+                    for l in self.scene['Levers']:
+                        l.properties["flip"] = False
+                        l.append_texture(arcade.load_texture("placeholder_assets/levers/lever_"+l.properties["color"]+"_up.png"))
+                        l.set_texture(0)
+                        print(l)
+                    # if self.block == True:
+                    #     for n in self.scene['Problem_Screen']:
 
-
+                    #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list)-1])}.png"))
+                    #             n.set_texture(1)
+                    # else: 
+                    #     for n in self.scene['Problem_Screen']:
+                    #         if n.properties["order"] == len(self.num_list + 4):
+                    #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list) + 3])}.png"))
+                    #             n.set_texture(1)
     def on_key_release(self, key, modifiers):
         """Called when the user releases a key."""
 
@@ -223,14 +295,25 @@ class MyGame(arcade.Window):
        
         death = collisions.HandleCollisions.DangerCollision(self.player_sprite, self.scene['Danger'])
         if death:
+            self.num_list.clear() 
             self.setup()
         portal = collisions.HandleCollisions.PortalCollision(self.player_sprite, self.scene['Portal'])
         if portal:
             self.stage_num +=1
+            self.point_x = 128
+            self.point_y = 1744
+            self.block = True
+            self.bridge = False
             self.setup()
-        puzzle.HandlePuzzle.leversDoor(self.scene['Levers'],self.scene['Blocking'])
+        checkpoint = collisions.HandleCollisions.CheckpointCollision(self.player_sprite, self.scene['Checkpoint'])
+        if checkpoint:
+            self.point_x = self.player_sprite.center_x
+            self.point_y = self.player_sprite.center_y
         
-        puzzle.HandlePuzzle.leversBridge(self.scene['Levers'],self.scene['Bridge'],self.physics_engine)
+        if self.block == False:
+            puzzle.HandlePuzzle.leversDoor(self.num_list,self.scene['Blocking'])
+        
+        puzzle.HandlePuzzle.leversBridge(self.bridge,self.scene['Bridge'],self.physics_engine)
 
 
         # Position the camera
