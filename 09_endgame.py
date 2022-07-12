@@ -389,10 +389,10 @@ class MyGame(arcade.Window):
                     self.bridge = True
                     self.num_list.clear()
                 # Stage 2
-                elif self.num_list[0] == 2 and self.num_list[1] == 9 and self.num_list[2] == 6 and self.num_list[3] == 1 and self.stage_num == 3:  
+                elif ((self.num_list[0] == 2 and self.num_list[1] == 9) or (self.num_list[0] == 9 and self.num_list[1] == 2)) and self.num_list[2] == 6 and self.num_list[3] == 1 and self.stage_num == 3:  
                     self.block = False
                     self.num_list.clear()
-                elif self.num_list[0] == 2 and self.num_list[1] == 3 and self.num_list[2] == 5 and self.num_list[3] == 9 and self.stage_num == 3:
+                elif ((self.num_list[0] == 2 and self.num_list[1] == 3) or (self.num_list[0] == 3 and self.num_list[1] == 2)) and self.num_list[2] == 5 and self.num_list[3] == 9 and self.stage_num == 3:
                     self.bridge = True
                     self.num_list.clear()
                 # Stage 3
