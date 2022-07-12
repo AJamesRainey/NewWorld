@@ -206,16 +206,16 @@ class MyGame(arcade.Window):
             # else: 
             #     self.bridge = collisions.HandleCollisions.LeverCollision(self.player_sprite,self.scene['Levers'], self.block)
             print(self.num_list)
-            # if self.block == True:
-            #     for n in self.scene['Problem_Screen']:
-            #         if n.properties["order"] == len(self.num_list):
-            #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list)-1])}.png"))
-            #             n.set_texture(1)
-            # else: 
-            #     for n in self.scene['Problem_Screen']:
-            #         if n.properties["order"] == len(self.num_list + 4):
-            #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list) + 3])}.png"))
-            #             n.set_texture(1)
+            if self.block == True:
+                for n in self.scene['Problem_Screen']:
+                    if n.properties["number"] == len(self.num_list):
+                        n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list)-1])}.png"))
+                        n.set_texture(1)
+            else: 
+                for n in self.scene['Problem_Screen']:
+                    if n.properties["number"] == len(self.num_list)+ 4:
+                        n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list)-1])}.png"))
+                        n.set_texture(1)
             if len(self.num_list) == 4:
                 # if self.stage_num == 2:
                 # stage 1
@@ -254,16 +254,15 @@ class MyGame(arcade.Window):
                         l.append_texture(arcade.load_texture("placeholder_assets/levers/lever_"+l.properties["color"]+"_up.png"))
                         l.set_texture(0)
                         print(l)
-                    # if self.block == True:
-                    #     for n in self.scene['Problem_Screen']:
-
-                    #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list)-1])}.png"))
-                    #             n.set_texture(1)
-                    # else: 
-                    #     for n in self.scene['Problem_Screen']:
-                    #         if n.properties["order"] > 4:
-                    #             n.append_texture(arcade.load_texture(f"placeholder_assets/math/{int(self.num_list[len(self.num_list) + 3])}.png"))
-                    #             n.set_texture(1)
+                    if self.block == True:
+                        for n in self.scene['Problem_Screen']:
+                                n.append_texture(arcade.load_texture(f"placeholder_assets/math/blank.png"))
+                                n.set_texture(0)
+                    else: 
+                        for n in self.scene['Problem_Screen']:
+                            if n.properties["number"] > 4:
+                                n.append_texture(arcade.load_texture(f"placeholder_assets/math/blank.png"))
+                                n.set_texture(0)
     def on_key_release(self, key, modifiers):
         """Called when the user releases a key."""
 

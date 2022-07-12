@@ -130,42 +130,42 @@
  <objectgroup id="17" name="Problem_Screen">
   <object id="21" name="screen 1" gid="76" x="4992" y="388" width="128" height="128">
    <properties>
-    <property name="order" type="int" value="1"/>
+    <property name="number" type="int" value="1"/>
    </properties>
   </object>
   <object id="22" name="screen 2" gid="76" x="5248" y="380" width="128" height="128">
    <properties>
-    <property name="order" type="int" value="2"/>
+    <property name="number" type="int" value="2"/>
    </properties>
   </object>
   <object id="23" name="screen 3" gid="76" x="5496" y="384" width="128" height="128">
    <properties>
-    <property name="order" type="int" value="3"/>
+    <property name="number" type="int" value="3"/>
    </properties>
   </object>
   <object id="24" name="screen 4" gid="76" x="5760" y="388" width="128" height="128">
    <properties>
-    <property name="order" type="int" value="4"/>
+    <property name="number" type="int" value="4"/>
    </properties>
   </object>
   <object id="25" name="screen 5" gid="76" x="1536" y="3452" width="128" height="128">
    <properties>
-    <property name="order" type="int" value="5"/>
+    <property name="number" type="int" value="5"/>
    </properties>
   </object>
   <object id="26" name="screen 6" gid="76" x="1792" y="3460" width="128" height="128">
    <properties>
-    <property name="order" type="int" value="6"/>
+    <property name="number" type="int" value="6"/>
    </properties>
   </object>
   <object id="27" name="screen 7" gid="76" x="2044" y="3452" width="128" height="128">
    <properties>
-    <property name="order" type="int" value="7"/>
+    <property name="number" type="int" value="7"/>
    </properties>
   </object>
   <object id="28" name="screen 8" gid="76" x="2432" y="3456" width="128" height="128">
    <properties>
-    <property name="order" type="int" value="8"/>
+    <property name="number" type="int" value="8"/>
    </properties>
   </object>
  </objectgroup>
