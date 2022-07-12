@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="15" nextobjectid="20">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="50" height="30" tilewidth="128" tileheight="128" infinite="0" nextlayerid="18" nextobjectid="39">
  <tileset firstgid="1" source="placeholder_assets/Bunker_tiles.tsx"/>
  <layer id="5" name="Back_wall" width="50" height="30">
   <data encoding="csv">
@@ -74,14 +74,14 @@
    <properties>
     <property name="color" value="red"/>
     <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="0"/>
+    <property name="order" type="int" value="1"/>
    </properties>
   </object>
   <object id="17" name="yellow1" gid="43" x="3219.74" y="1792.28" width="128" height="128">
    <properties>
     <property name="color" value="yellow"/>
     <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="1"/>
+    <property name="order" type="int" value="9"/>
    </properties>
   </object>
   <object id="5" name="blue1" gid="37" x="1532" y="1158.67" width="128" height="128">
@@ -95,35 +95,77 @@
    <properties>
     <property name="color" value="green"/>
     <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="3"/>
+    <property name="order" type="int" value="7"/>
    </properties>
   </object>
   <object id="8" name="red2" gid="41" x="3845.04" y="3585.95" width="128" height="128">
    <properties>
     <property name="color" value="red"/>
     <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="4"/>
+    <property name="order" type="int" value="7"/>
    </properties>
   </object>
   <object id="9" name="blue2" gid="37" x="2051.4" y="3586.4" width="128" height="128">
    <properties>
     <property name="color" value="blue"/>
     <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="5"/>
+    <property name="order" type="int" value="4"/>
    </properties>
   </object>
   <object id="10" name="green2" gid="39" x="1151.47" y="3585.95" width="128" height="128">
    <properties>
     <property name="color" value="green"/>
     <property name="flip" type="bool" value="false"/>
-    <property name="order" type="int" value="6"/>
+    <property name="order" type="int" value="3"/>
    </properties>
   </object>
   <object id="11" name="yellow2" gid="43" x="2947.33" y="3588.17" width="128" height="128">
    <properties>
     <property name="color" value="yellow"/>
     <property name="flip" type="bool" value="false"/>
+    <property name="order" type="int" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="15" name="Problem_Screen">
+  <object id="29" name="screen 1" gid="76" x="3968" y="1668" width="128" height="128">
+   <properties>
+    <property name="order" type="int" value="1"/>
+   </properties>
+  </object>
+  <object id="30" name="screen 2" gid="76" x="4224" y="1668" width="128" height="128">
+   <properties>
+    <property name="order" type="int" value="2"/>
+   </properties>
+  </object>
+  <object id="31" name="screen 3" gid="76" x="4608" y="1668" width="128" height="128">
+   <properties>
+    <property name="order" type="int" value="3"/>
+   </properties>
+  </object>
+  <object id="33" name="screen 4" gid="76" x="4860" y="1660" width="128" height="128">
+   <properties>
+    <property name="order" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="34" name="screen 5" gid="76" x="1920" y="2308" width="128" height="128">
+   <properties>
+    <property name="order" type="int" value="5"/>
+   </properties>
+  </object>
+  <object id="35" name="screen 6" gid="76" x="2176" y="2308" width="128" height="128">
+   <properties>
+    <property name="Order" type="int" value="6"/>
+   </properties>
+  </object>
+  <object id="36" name="screen 7" gid="76" x="2436" y="2308" width="128" height="128">
+   <properties>
     <property name="order" type="int" value="7"/>
+   </properties>
+  </object>
+  <object id="37" name="screen 8" gid="76" x="2812" y="2304" width="128" height="128">
+   <properties>
+    <property name="order" type="int" value="8"/>
    </properties>
   </object>
  </objectgroup>
@@ -243,12 +285,12 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,137,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,76,82,76,80,81,76,82,76,112,78,74,68,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,137,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,82,0,80,81,0,82,0,112,78,74,68,0,0,0,0,0,0,0,
 0,0,0,132,0,0,0,0,0,0,0,0,73,0,0,0,0,0,0,0,0,0,0,133,0,0,75,0,0,0,0,0,0,0,0,137,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,81,76,82,76,79,76,112,77,76,78,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,81,0,82,0,79,0,112,77,0,78,69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,128,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,
