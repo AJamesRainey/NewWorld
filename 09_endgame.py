@@ -69,7 +69,7 @@ class MyGame(arcade.Window):
         self.gui_camera = arcade.Camera(self.width, self.height)
 
 
-        # Name of map file to load
+        # Name of map file to loads
 
 
         # Layer specific options are defined based on Layer names in a dictionary
@@ -99,7 +99,7 @@ class MyGame(arcade.Window):
         # Read in the tiled map
         # map_name = f":resources:tiled_maps/map2_level_{self.level}.json"
         if self.stage_num == 1:
-            self.tile_map = arcade.load_tilemap(f"maps\start-screen.tmx", CONSTANT.TILE_SCALING, layer_options)
+            self.tile_map = arcade.load_tilemap(f"maps\start-screen-01.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 2:
             self.tile_map = arcade.load_tilemap(f"Stage_1.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 3:
