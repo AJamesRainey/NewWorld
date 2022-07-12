@@ -381,7 +381,7 @@ class MyGame(arcade.Window):
                         n.set_texture(1)
             if len(self.num_list) == 4:
                 # if self.stage_num == 2:
-                # stage 1
+                 # stage 1
                 if self.num_list[0] == 1 and self.num_list[1] == 9 and self.num_list[2] == 2 and self.num_list[3] == 7 and self.stage_num == 2:
                     self.block = False
                     self.num_list.clear()     
