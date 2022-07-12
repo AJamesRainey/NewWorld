@@ -54,10 +54,20 @@ class MyGame(arcade.Window):
 
         self.wallsList = None
 
-        arcade.set_background_color(arcade.csscolor.CORNFLOWER_BLUE)
+        arcade.set_background_color(arcade.csscolor.GRAY)
+
+    # def main():
+    # """ Main function """
+
+    #     window = arcade.Window(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_TITLE)
+    #     start_view = InstructionView()
+    #     window.show_view(start_view)
+    #     arcade.run()
 
     def setup(self):
         """Set up the game here. Call this function to restart the game."""
+
+        self.background = arcade.load_texture(":resources:images/backgrounds/abstract_1.jpg")
 
         # Set up the Cameras
         self.camera = arcade.Camera(self.width, self.height)
@@ -94,7 +104,7 @@ class MyGame(arcade.Window):
         # Read in the tiled map
         # map_name = f":resources:tiled_maps/map2_level_{self.level}.json"
         if self.stage_num == 0:
-            self.tile_map = arcade.load_tilemap(f"maps/start_screen_01.tmx", CONSTANT.TILE_SCALING, layer_options)
+            self.tile_map = arcade.load_tilemap(f"maps/start_screen2.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 1:
             self.tile_map = arcade.load_tilemap(f"Stage_{self.stage_num}.tmx", CONSTANT.TILE_SCALING, layer_options)
         elif self.stage_num == 2:
@@ -238,9 +248,10 @@ class MyGame(arcade.Window):
             self.point_x = self.player_sprite.center_x
             self.point_y = self.player_sprite.center_y
         
-        puzzle.HandlePuzzle.leversDoor(self.scene['Levers'],self.scene['Blocking'])
-        
-        puzzle.HandlePuzzle.leversBridge(self.scene['Levers'],self.scene['Bridge'],self.physics_engine)
+        if self.stage_num >= 1:
+            puzzle.HandlePuzzle.leversDoor(self.scene['Levers'],self.scene['Blocking'])
+            
+            puzzle.HandlePuzzle.leversBridge(self.scene['Levers'],self.scene['Bridge'],self.physics_engine)
 
 
         # Position the camera

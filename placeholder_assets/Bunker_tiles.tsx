@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.8" tiledversion="1.8.4" name="Bunker_tiles" tilewidth="1536" tileheight="768" tilecount="124" columns="0">
+<tileset version="1.8" tiledversion="1.8.5" name="Bunker_tiles" tilewidth="1536" tileheight="1024" tilecount="125" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="12">
   <image width="128" height="128" source="light_gray.png"/>
@@ -396,5 +396,8 @@
  </tile>
  <tile id="136">
   <image width="128" height="128" source="light_gray_solve.png"/>
+ </tile>
+ <tile id="144">
+  <image width="1280" height="1024" source="../images/tiles/start-screen4.png"/>
  </tile>
 </tileset>
